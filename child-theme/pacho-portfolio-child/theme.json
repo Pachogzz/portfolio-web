@@ -1,0 +1,220 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 2,
+    "settings": {
+        "color": {
+            "palette": [
+                {
+                    "slug": "primary",
+                    "color": "#06b6d4",
+                    "name": "Primary (Cyan)"
+                },
+                {
+                    "slug": "primary-light",
+                    "color": "#22d3ee",
+                    "name": "Primary Light"
+                },
+                {
+                    "slug": "primary-dark",
+                    "color": "#0891b2",
+                    "name": "Primary Dark"
+                },
+                {
+                    "slug": "background-dark",
+                    "color": "#0f172a",
+                    "name": "Background Dark (Slate 900)"
+                },
+                {
+                    "slug": "background-alt",
+                    "color": "#1e293b",
+                    "name": "Background Alt (Slate 800)"
+                },
+                {
+                    "slug": "text-primary",
+                    "color": "#e2e8f0",
+                    "name": "Text Primary (Slate 200)"
+                },
+                {
+                    "slug": "text-secondary",
+                    "color": "#94a3b8",
+                    "name": "Text Secondary (Slate 400)"
+                },
+                {
+                    "slug": "white",
+                    "color": "#ffffff",
+                    "name": "White"
+                },
+                {
+                    "slug": "border",
+                    "color": "#334155",
+                    "name": "Border (Slate 700)"
+                }
+            ],
+            "gradients": [
+                {
+                    "slug": "primary-gradient",
+                    "gradient": "linear-gradient(135deg, #22d3ee 0%, #0891b2 100%)",
+                    "name": "Primary Gradient"
+                }
+            ],
+            "custom": true,
+            "defaultPalette": false
+        },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+                    "slug": "inter",
+                    "name": "Inter",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Inter",
+                            "fontWeight": "300",
+                            "fontStyle": "normal",
+                            "src": ["https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fAZ9hiJ-Ek-_EeA.woff2"]
+                        },
+                        {
+                            "fontFamily": "Inter",
+                            "fontWeight": "400",
+                            "fontStyle": "normal",
+                            "src": ["https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyfAZ9hiJ-Ek-_EeA.woff2"]
+                        },
+                        {
+                            "fontFamily": "Inter",
+                            "fontWeight": "500",
+                            "fontStyle": "normal",
+                            "src": ["https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fAZ9hiJ-Ek-_EeA.woff2"]
+                        },
+                        {
+                            "fontFamily": "Inter",
+                            "fontWeight": "600",
+                            "fontStyle": "normal",
+                            "src": ["https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYAZ9hiJ-Ek-_EeA.woff2"]
+                        },
+                        {
+                            "fontFamily": "Inter",
+                            "fontWeight": "700",
+                            "fontStyle": "normal",
+                            "src": ["https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYAZ9hiJ-Ek-_EeA.woff2"]
+                        }
+                    ]
+                }
+            ],
+            "fontSizes": [
+                {
+                    "slug": "small",
+                    "size": "0.875rem",
+                    "name": "Small"
+                },
+                {
+                    "slug": "medium",
+                    "size": "1rem",
+                    "name": "Medium"
+                },
+                {
+                    "slug": "large",
+                    "size": "1.25rem",
+                    "name": "Large"
+                },
+                {
+                    "slug": "x-large",
+                    "size": "1.75rem",
+                    "name": "Extra Large"
+                },
+                {
+                    "slug": "xx-large",
+                    "size": "2.5rem",
+                    "name": "Huge"
+                }
+            ]
+        },
+        "spacing": {
+            "units": ["px", "em", "rem", "%", "vw", "vh"],
+            "spacingSizes": [
+                {
+                    "slug": "10",
+                    "size": "0.5rem",
+                    "name": "XS"
+                },
+                {
+                    "slug": "20",
+                    "size": "1rem",
+                    "name": "S"
+                },
+                {
+                    "slug": "30",
+                    "size": "1.5rem",
+                    "name": "M"
+                },
+                {
+                    "slug": "40",
+                    "size": "2.5rem",
+                    "name": "L"
+                },
+                {
+                    "slug": "50",
+                    "size": "4rem",
+                    "name": "XL"
+                },
+                {
+                    "slug": "60",
+                    "size": "6rem",
+                    "name": "XXL"
+                }
+            ]
+        },
+        "layout": {
+            "contentSize": "1200px",
+            "wideSize": "1400px"
+        }
+    },
+    "styles": {
+        "color": {
+            "background": "#0f172a",
+            "text": "#e2e8f0"
+        },
+        "typography": {
+            "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+            "fontSize": "1rem",
+            "lineHeight": "1.6"
+        },
+        "elements": {
+            "heading": {
+                "typography": {
+                    "fontFamily": "'Inter', sans-serif",
+                    "fontWeight": "700"
+                },
+                "color": {
+                    "text": "#f8fafc"
+                }
+            },
+            "link": {
+                "color": {
+                    "text": "#22d3ee"
+                },
+                ":hover": {
+                    "color": {
+                        "text": "#06b6d4"
+                    }
+                }
+            },
+            "button": {
+                "color": {
+                    "background": "#06b6d4",
+                    "text": "#ffffff"
+                },
+                "border": {
+                    "radius": "0.75rem"
+                },
+                "typography": {
+                    "fontWeight": "600"
+                },
+                ":hover": {
+                    "color": {
+                        "background": "#0891b2"
+                    }
+                }
+            }
+        }
+    }
+}
