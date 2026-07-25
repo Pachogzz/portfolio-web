@@ -1,0 +1,310 @@
+/*
+Theme Name: Pacho González - Portfolio
+Theme URI: https://pachogonzalez.click
+Template: kadence
+Author: Francisco (Pacho) González
+Author URI: https://pachogonzalez.click
+Description: Child theme personalizado para portafolio de servicios web freelance
+Version: 1.0.0
+Text Domain: pacho-portfolio
+*/
+
+/* ==========================================================================
+   VARIABLES CSS - Paleta basada en portafolio actual (pachogzz.github.io)
+   Estilo: Dark mode, Cyan/Teal primary, Inter font, minimalista
+   ========================================================================== */
+
+:root {
+    /* Primary Colors - Cyan/Teal */
+    --pacho-primary-50: #ecfeff;
+    --pacho-primary-100: #cffafe;
+    --pacho-primary-200: #a5f3fc;
+    --pacho-primary-300: #67e8f9;
+    --pacho-primary-400: #22d3ee;
+    --pacho-primary-500: #06b6d4;
+    --pacho-primary-600: #0891b2;
+    --pacho-primary-700: #0e7490;
+    --pacho-primary-800: #155e75;
+    --pacho-primary-900: #164e63;
+
+    /* Slate (backgrounds & text) */
+    --pacho-slate-50: #f8fafc;
+    --pacho-slate-100: #f1f5f9;
+    --pacho-slate-200: #e2e8f0;
+    --pacho-slate-300: #cbd5e1;
+    --pacho-slate-400: #94a3b8;
+    --pacho-slate-500: #64748b;
+    --pacho-slate-600: #475569;
+    --pacho-slate-700: #334155;
+    --pacho-slate-800: #1e293b;
+    --pacho-slate-900: #0f172a;
+
+    /* Semantic tokens */
+    --pacho-bg-primary: var(--pacho-slate-900);
+    --pacho-bg-secondary: var(--pacho-slate-800);
+    --pacho-text-primary: var(--pacho-slate-200);
+    --pacho-text-secondary: var(--pacho-slate-400);
+    --pacho-accent: var(--pacho-primary-500);
+    --pacho-accent-hover: var(--pacho-primary-600);
+    --pacho-accent-light: var(--pacho-primary-400);
+
+    /* Typography */
+    --pacho-font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --pacho-font-weight-light: 300;
+    --pacho-font-weight-regular: 400;
+    --pacho-font-weight-medium: 500;
+    --pacho-font-weight-semibold: 600;
+    --pacho-font-weight-bold: 700;
+
+    /* Spacing */
+    --pacho-section-padding: 4rem 0;
+    --pacho-section-padding-lg: 6rem 0;
+    --pacho-container-max: 1280px;
+
+    /* Border radius */
+    --pacho-radius-sm: 0.375rem;
+    --pacho-radius-md: 0.5rem;
+    --pacho-radius-lg: 0.75rem;
+    --pacho-radius-xl: 1rem;
+
+    /* Shadows */
+    --pacho-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --pacho-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --pacho-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+    --pacho-shadow-accent: 0 4px 14px rgba(6, 182, 212, 0.25);
+
+    /* Transitions */
+    --pacho-transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */
+
+body {
+    font-family: var(--pacho-font-primary);
+    background-color: var(--pacho-bg-primary);
+    color: var(--pacho-text-primary);
+    line-height: 1.6;
+}
+
+.site {
+    background-color: var(--pacho-bg-primary);
+}
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--pacho-font-primary);
+    font-weight: var(--pacho-font-weight-bold);
+    color: var(--pacho-slate-50);
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
+
+p {
+    color: var(--pacho-text-primary);
+    font-weight: var(--pacho-font-weight-regular);
+}
+
+a {
+    color: var(--pacho-accent-light);
+    transition: var(--pacho-transition);
+}
+
+a:hover {
+    color: var(--pacho-accent);
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+.wp-block-button__link,
+.btn-primary {
+    background-color: var(--pacho-accent) !important;
+    color: #ffffff !important;
+    font-weight: var(--pacho-font-weight-semibold);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--pacho-radius-lg);
+    transition: var(--pacho-transition);
+    box-shadow: var(--pacho-shadow-accent);
+    border: none;
+}
+
+.wp-block-button__link:hover,
+.btn-primary:hover {
+    background-color: var(--pacho-accent-hover) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(6, 182, 212, 0.35);
+}
+
+.btn-secondary {
+    background-color: transparent !important;
+    color: var(--pacho-accent) !important;
+    border: 2px solid var(--pacho-accent);
+    font-weight: var(--pacho-font-weight-semibold);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--pacho-radius-lg);
+    transition: var(--pacho-transition);
+}
+
+.btn-secondary:hover {
+    background-color: var(--pacho-accent) !important;
+    color: #ffffff !important;
+}
+
+/* ==========================================================================
+   SECTIONS
+   ========================================================================== */
+
+.pacho-section {
+    padding: var(--pacho-section-padding);
+}
+
+.pacho-section-alt {
+    background-color: var(--pacho-bg-secondary);
+    padding: var(--pacho-section-padding);
+}
+
+@media (min-width: 1024px) {
+    .pacho-section,
+    .pacho-section-alt {
+        padding: var(--pacho-section-padding-lg);
+    }
+}
+
+/* ==========================================================================
+   CARDS
+   ========================================================================== */
+
+.pacho-card {
+    background-color: var(--pacho-bg-secondary);
+    border: 1px solid var(--pacho-slate-700);
+    border-radius: var(--pacho-radius-xl);
+    padding: 2rem;
+    transition: var(--pacho-transition);
+}
+
+.pacho-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.1);
+    border-color: var(--pacho-primary-700);
+}
+
+.pacho-plan-card {
+    background-color: var(--pacho-bg-secondary);
+    border: 1px solid var(--pacho-slate-700);
+    border-radius: var(--pacho-radius-xl);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: var(--pacho-transition);
+    position: relative;
+}
+
+.pacho-plan-card.featured {
+    border-color: var(--pacho-accent);
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.15);
+}
+
+.pacho-plan-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--pacho-shadow-accent);
+}
+
+.pacho-plan-price {
+    font-size: 2.5rem;
+    font-weight: var(--pacho-font-weight-bold);
+    color: var(--pacho-accent);
+    margin: 1rem 0;
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
+
+.site-header {
+    background-color: rgba(15, 23, 42, 0.95) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--pacho-slate-800);
+}
+
+.site-header .site-title {
+    color: var(--pacho-slate-50) !important;
+    font-weight: var(--pacho-font-weight-bold);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.site-footer {
+    background-color: var(--pacho-slate-900) !important;
+    border-top: 1px solid var(--pacho-slate-800);
+    color: var(--pacho-text-secondary);
+}
+
+/* ==========================================================================
+   GRADIENT TEXT
+   ========================================================================== */
+
+.gradient-text {
+    color: #06b6d4;
+    background: linear-gradient(135deg, var(--pacho-primary-400), var(--pacho-primary-600));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    :root {
+        --pacho-section-padding: 3rem 0;
+    }
+
+    .pacho-plan-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pacho-animate {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pacho-animate {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* ==========================================================================
+   UTILITIES
+   ========================================================================== */
+
+.text-accent { color: var(--pacho-accent); }
+.bg-dark { background-color: var(--pacho-bg-primary); }
+.bg-dark-alt { background-color: var(--pacho-bg-secondary); }
